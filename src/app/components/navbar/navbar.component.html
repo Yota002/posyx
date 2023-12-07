@@ -1,0 +1,9 @@
+<header class="p-4">
+  <nav>
+    <ul class="flex gap-2">
+      <li *ngFor="let item of menuItems">
+        <a [routerLink]="item.path">{{ item.title }}</a>
+      </li>
+    </ul>
+  </nav>
+</header>
