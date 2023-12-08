@@ -1,9 +1,15 @@
-<header class="p-4">
-  <nav>
-    <ul class="flex gap-2">
-      <li *ngFor="let item of menuItems">
-        <a [routerLink]="item.path">{{ item.title }}</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+<nav class="border-t">
+  <ul class="flex justify-between gap-2">
+    <li class="w-full" *ngFor="let item of menuItems">
+      <a
+        class="text-gray-500 py-1 px-4 flex flex-col items-center"
+        [routerLink]="item.path"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="text-red-500"
+      >
+        <span class="material-symbols-rounded"> {{ item.icon }} </span>
+        {{ item.title }}
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,19 @@
+<div class="flex flex-col gap-4 text-center m-4">
+  <h1>Profile</h1>
+  <ng-container *ngIf="currentUser | async as user; else loading">
+    <div>{{ user.name }}</div>
+    <button
+      (click)="logOut()"
+      mat-icon-button
+      color="warn"
+      matTooltip="Log Out"
+    >
+      <mat-icon class="material-symbols-rounded">logout</mat-icon>
+    </button>
+  </ng-container>
+</div>
+
+<ng-template #loading>
+  Loading..
+  <span class="material-symbols-rounded"> progress_activity </span></ng-template
+>

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 interface MenuItem {
   title: string;
   path: string;
+  icon?: string;
   isExternal?: boolean;
 }
 
@@ -13,8 +14,9 @@ interface MenuItem {
 })
 export class NavbarComponent {
   menuItems: MenuItem[] = [
-    { path: '/', title: 'Home' },
-    { path: '/login', title: 'Login' },
-    { path: '/register', title: 'Register' },
+    { path: '/', title: 'Home', icon: 'home' },
+    { path: '/friends', title: 'Friends', icon: 'group' },
+    { path: '/map', title: 'Map', icon: 'map' },
+    { path: '/profile', title: 'Profile', icon: 'person' },
   ];
 }
